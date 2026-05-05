@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hillgate Finance — Support (web app)</title>
+<style>
+  :root {
+    --navy: #0b2545;
+    --ink: #1a1a1a;
+    --muted: #5b6472;
+    --line: #e3e6ea;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .app {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+    background: #fff;
+  }
+  .side {
+    background: #0b2545;
+    color: #cfd6e3;
+    padding: 22px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .side .brand {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    padding: 0 22px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 17px;
+  }
+  .side .brand span { color: #8aa1c4; font-weight: 500; }
+  .nav { list-style: none; margin: 14px 0 0; padding: 0; font-size: 14px; }
+  .nav li a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 22px; color: #cfd6e3; text-decoration: none;
+  }
+  .nav li a:hover { background: rgba(255,255,255,0.04); color: #fff; }
+  .nav .group {
+    text-transform: uppercase; font-size: 11px; letter-spacing: 0.14em;
+    color: #6e87aa; padding: 18px 22px 6px;
+  }
+  .nav .active > a {
+    background: rgba(255,255,255,0.08); color: #fff;
+    border-left: 3px solid #fff; padding-left: 19px;
+  }
+  .nav .sub {
+    list-style: none; margin: 4px 0 6px; padding: 0;
+    background: rgba(0,0,0,0.18);
+  }
+  .nav .sub li a { padding: 8px 22px 8px 44px; font-size: 13px; color: #b9c4d6; }
+  .nav .sub li.highlight a { color: #fff; background: rgba(255,255,255,0.04); }
+  .nav .sub .pill {
+    margin-left: auto; font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; background: rgba(255,255,255,0.12);
+    padding: 2px 6px; border-radius: 3px; color: #fff;
+  }
+
+  .main { background: #f6f7f9; display: flex; flex-direction: column; }
+  .topbar {
+    height: 60px; background: #fff; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; padding: 0 28px; gap: 16px;
+  }
+  .search {
+    flex: 1; max-width: 360px; height: 34px; background: #f0f2f5;
+    border-radius: 6px; padding: 0 12px; display: flex; align-items: center;
+    color: var(--muted); font-size: 13px;
+  }
+  .user {
+    margin-left: auto; display: flex; align-items: center; gap: 10px;
+    font-size: 13px;
+  }
+  .avatar { width: 28px; height: 28px; border-radius: 50%; background: #d8dde4; display: inline-block; }
+
+  .content { padding: 28px; flex: 1; position: relative; }
+  .content h1 { font-size: 22px; margin: 0 0 4px; font-weight: 600; color: var(--navy); }
+  .lede { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 860px; }
+  .tile { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+  .tile h4 { margin: 0 0 6px; font-size: 14px; font-weight: 600; }
+  .tile p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  .tile a.link {
+    color: var(--navy); font-size: 13px; font-weight: 500; text-decoration: none;
+    border-bottom: 1px solid currentColor; padding-bottom: 1px;
+  }
+
+  .callout {
+    position: absolute; left: 28px; bottom: 28px; max-width: 360px;
+    background: #fff7d6; border: 1px solid #e4d27a;
+    border-radius: 6px; padding: 8px 12px;
+    font-size: 12px; color: #5a4a10;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+  <aside class="side">
+    <div class="brand">Hillgate<span>.</span></div>
+    <ul class="nav">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Payments</a></li>
+      <li><a href="#">FX</a></li>
+      <li><a href="#">Accounts</a></li>
+      <li><a href="#">Beneficiaries</a></li>
+
+      <li class="group">Workspace</li>
+      <li><a href="#">Admin Settings</a></li>
+
+      <li class="group">Help</li>
+      <li class="active">
+        <a href="#">Support</a>
+        <ul class="sub">
+          <li><a href="#">Help centre</a></li>
+          <li><a href="#">Contact support</a></li>
+          <li class="highlight">
+            <a href="view1-public-complaints.html">Submit a complaint <span class="pill">↗</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+
+  <section class="main">
+    <div class="topbar">
+      <div class="search">Search payments, accounts, beneficiaries…</div>
+      <div class="user">
+        <span>Acme Trading B.V.</span>
+        <span class="avatar"></span>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Support</h1>
+      <p class="lede">Get help with your Hillgate account, or raise a formal complaint.</p>
+
+      <div class="tiles">
+        <div class="tile">
+          <h4>Help centre</h4>
+          <p>Browse articles on payments, FX, custody and account administration.</p>
+          <a class="link" href="#">Open help centre →</a>
+        </div>
+        <div class="tile">
+          <h4>Contact support</h4>
+          <p>Reach a human via secure message or scheduled call during business hours.</p>
+          <a class="link" href="#">Start a conversation →</a>
+        </div>
+        <div class="tile" style="border-color: var(--navy);">
+          <h4>Submit a complaint</h4>
+          <p>Open a formal complaint. Free of charge, available in English and Dutch.</p>
+          <a class="link" href="view1-public-complaints.html">Go to /complaints →</a>
+        </div>
+      </div>
+
+      <div class="callout">Deep-links to the public <strong>/complaints</strong> page so the same procedure and form are used for clients and non-clients alike.</div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hillgate Finance — Submit a complaint</title>
+<style>
+  :root {
+    --navy: #0b2545;
+    --ink: #1a1a1a;
+    --muted: #5b6472;
+    --line: #e3e6ea;
+    --line-2: #eef0f3;
+    --soft: #f8f9fb;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  h1, h2, h3 { letter-spacing: -0.01em; }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+  }
+  .wordmark { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: var(--navy); }
+  .wordmark span { color: var(--muted); font-weight: 500; }
+  .nav-links { display: flex; gap: 28px; margin-left: 48px; font-size: 14px; }
+  .nav-links a { text-decoration: none; }
+  .nav-cta { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 14px; }
+  .btn {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--navy);
+    background: var(--navy);
+    color: #fff;
+    cursor: pointer;
+  }
+  .btn.ghost { background: #fff; color: var(--navy); }
+  .btn.lg { padding: 12px 22px; font-size: 15px; }
+
+  .hero { padding: 64px 40px 32px; border-bottom: 1px solid var(--line-2); }
+  .hero .eyebrow {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-size: 40px; line-height: 1.1; margin: 0 0 12px;
+    font-weight: 600; color: var(--navy); letter-spacing: -0.02em;
+  }
+  .hero p { color: var(--muted); font-size: 16px; max-width: 680px; margin: 0; line-height: 1.55; }
+
+  .blocks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; padding: 8px 40px 0; }
+  .block { padding: 28px 28px 28px 0; border-bottom: 1px solid var(--line-2); }
+  .block:nth-child(2n) { padding-left: 28px; padding-right: 0; }
+  .block:nth-child(odd) { border-right: 1px solid var(--line-2); }
+  .block h3 { font-size: 16px; margin: 0 0 8px; color: var(--navy); font-weight: 600; }
+  .block p { margin: 0; color: var(--ink); font-size: 14px; line-height: 1.6; }
+  .block ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+
+  .form-section {
+    padding: 48px 40px 56px; background: var(--soft); border-top: 1px solid var(--line-2);
+  }
+  .form-section h2 { font-size: 22px; margin: 0 0 6px; color: var(--navy); font-weight: 600; }
+  .form-section .sub { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+
+  .form-card {
+    background: #fff; border: 1px solid var(--line); border-radius: 8px;
+    padding: 32px; max-width: 760px;
+  }
+  .form-note {
+    font-size: 13px; color: var(--muted);
+    background: #eef3fb; border: 1px solid #d6e1f1;
+    border-radius: 6px; padding: 10px 14px; margin: 0 0 24px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .field { display: flex; flex-direction: column; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 13px; font-weight: 500; margin-bottom: 6px; }
+  .field label .opt { color: var(--muted); font-weight: 400; margin-left: 4px; }
+  .field input, .field select, .field textarea {
+    font: inherit; padding: 10px 12px; border: 1px solid var(--line);
+    border-radius: 6px; background: #fff; color: var(--ink); font-size: 14px; outline: none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--navy); box-shadow: 0 0 0 3px rgba(11,37,69,0.08);
+  }
+  .field textarea { resize: vertical; min-height: 100px; line-height: 1.5; }
+
+  .upload {
+    border: 1.5px dashed #c9cfd8; border-radius: 6px; padding: 24px;
+    text-align: center; background: #fafbfc; color: var(--muted); font-size: 13px;
+  }
+  .upload strong { color: var(--ink); font-weight: 500; }
+  .upload .browse { color: var(--navy); text-decoration: underline; cursor: pointer; }
+  .upload .formats { display: block; margin-top: 6px; font-size: 12px; }
+
+  .check {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; line-height: 1.5; margin: 4px 0 20px;
+  }
+  .check input { margin-top: 2px; }
+
+  .form-actions {
+    display: flex; align-items: center; gap: 16px;
+    border-top: 1px solid var(--line-2); padding-top: 20px;
+  }
+  .form-actions .meta { font-size: 12px; color: var(--muted); }
+
+  .footer {
+    background: #fff; border-top: 1px solid var(--line);
+    padding: 28px 40px; display: flex; align-items: center; gap: 28px;
+    font-size: 13px; color: var(--muted); flex-wrap: wrap;
+  }
+  .footer a { text-decoration: none; }
+  .footer .reg {
+    margin-left: auto; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wordmark">Hillgate<span>.</span></div>
+  <div class="nav-links">
+    <a href="#">Product</a>
+    <a href="#">Company</a>
+    <a href="#">Legal</a>
+  </div>
+  <div class="nav-cta">
+    <a href="#">Login</a>
+    <a class="btn ghost" href="#">Sign up</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Complaints</div>
+  <h1>Submit a complaint.</h1>
+  <p>If something hasn't gone the way it should, we want to hear from you. Hillgate Finance investigates every complaint we receive and aims to put things right quickly.</p>
+</section>
+
+<section class="blocks">
+  <div class="block">
+    <h3>How to submit a complaint</h3>
+    <p>You can reach our complaints team in three ways:</p>
+    <ul>
+      <li>Using the secure web form below</li>
+      <li>By email to <strong>complaints@hillgate.finance</strong></li>
+      <li>By post to Hillgate Finance B.V., Amsterdam, the Netherlands</li>
+    </ul>
+  </div>
+  <div class="block">
+    <h3>Free of charge</h3>
+    <p>Filing a complaint with Hillgate Finance is always free. We will never charge a fee for raising, investigating, or escalating a concern.</p>
+  </div>
+  <div class="block">
+    <h3>Languages</h3>
+    <p>Complaints can be submitted and will be handled in <strong>English</strong> or <strong>Dutch</strong>. Replies will be issued in the language in which the complaint was filed.</p>
+  </div>
+  <div class="block">
+    <h3>Procedure and timelines</h3>
+    <p style="color: var(--muted); font-style: italic;">[Placeholder] We will acknowledge your complaint within X business days of receipt and aim to issue a final response within Y weeks. If you are not satisfied with our final response, you may escalate to Kifid or the relevant supervisory authority — full details to follow.</p>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2>Complaint form</h2>
+  <p class="sub">All fields marked required must be completed. Supporting documents help us investigate faster.</p>
+
+  <form class="form-card" onsubmit="event.preventDefault();">
+    <p class="form-note">Filing a complaint is free of charge. You can submit in English or Dutch.</p>
+
+    <div class="form-row">
+      <div class="field"><label>Full name</label><input type="text" placeholder="Jane Doe" /></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="jane@example.com" /></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field"><label>Phone <span class="opt">(optional)</span></label><input type="tel" placeholder="+31 20 000 0000" /></div>
+      <div class="field"><label>Hillgate account reference <span class="opt">(optional, for existing clients)</span></label><input type="text" placeholder="HG-XXXXXX" /></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full"><label>Residential address</label><input type="text" placeholder="Street, number, postcode, city, country" /></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label>Service the complaint relates to</label>
+        <select>
+          <option>Select a service…</option>
+          <option>Custody of crypto-assets</option>
+          <option>Exchange of crypto-assets for funds</option>
+          <option>Exchange of crypto-assets for other crypto-assets</option>
+          <option>Transfer services</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label>Date of the event</label><input type="date" /></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full"><label>Description of the complaint</label><textarea placeholder="Please describe what happened, including any reference numbers, dates, and people you spoke with."></textarea></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full"><label>Desired outcome</label><textarea placeholder="What outcome are you hoping for?"></textarea></div>
+    </div>
+
+    <div class="form-row">
+      <div class="field full">
+        <label>Supporting documents</label>
+        <div class="upload">
+          <strong>Drag and drop files here</strong> or <span class="browse">browse</span>
+          <span class="formats">PDF, PNG, JPG, DOCX — up to 25 MB total</span>
+        </div>
+      </div>
+    </div>
+
+    <label class="check">
+      <input type="checkbox" />
+      <span>I confirm the information provided is accurate to the best of my knowledge.</span>
+    </label>
+
+    <div class="form-actions">
+      <button class="btn lg" type="submit">Submit complaint</button>
+      <span class="meta">You'll receive an email acknowledgement at the address provided.</span>
+    </div>
+  </form>
+</section>
+
+<footer class="footer">
+  <a href="#">Legal</a>
+  <a href="#">Privacy</a>
+  <a href="#">Complaints</a>
+  <a href="#">Contact</a>
+  <span class="reg">KvK 00000000 · EMI licence DNB R000000</span>
+</footer>
+
+</body>
+</html>
