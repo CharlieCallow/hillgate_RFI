@@ -88,6 +88,7 @@ nav.primary a {
 }
 nav.primary .has-dropdown {
   position: relative;
+  padding: 12px 0;
 }
 nav.primary .has-dropdown > span {
   cursor: pointer;
@@ -104,9 +105,9 @@ nav.primary .dropdown {
   border: 1px solid var(--border);
   min-width: 260px;
   padding: 8px 0;
-  margin-top: 6px;
 }
-nav.primary .has-dropdown:hover .dropdown { display: block; }
+nav.primary .has-dropdown:hover .dropdown,
+nav.primary .has-dropdown:focus-within .dropdown { display: block; }
 nav.primary .dropdown a {
   display: block;
   padding: 8px 16px;
