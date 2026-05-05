@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Hillgate Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="wordmark">Hillgate</span>
+      <span class="subtitle">Finance B.V.</span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('nav.primary').classList.toggle('open')" aria-label="Menu">☰</button>
+    <nav class="primary">
+      <a href="about.html">About</a>
+      <span class="has-dropdown"><span>Services</span><div class="dropdown"><a href="services.html">All services</a><a href="services-payments.html">Payments and FX</a><a href="services-custody.html">Custody</a><a href="services-exchange.html">Exchange</a><a href="services-transfer.html">Transfer</a></div></span>
+      <a href="pricing.html">Pricing</a>
+      <a href="regulatory.html">Regulatory</a>
+      <span class="has-dropdown"><span>Disclosures</span><div class="dropdown"><a href="disclosures.html">Disclosure hub</a><a href="disclosures-conflicts.html">Conflicts of interest</a><a href="disclosures-risks.html">Risk warning</a><a href="disclosures-environmental.html">Environmental impact</a><a href="disclosures-custody.html">Custody policy</a><a href="complaints.html">Complaints</a><a href="whistleblowing.html">Whistleblowing</a></div></span>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="https://app.hillgate.com" class="btn btn-outline">Client login</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Pricing</h1>
+    <p class="lead">Hillgate publishes its pricing methodology in a prominent place on its website, in compliance with Article 66(4) and Article 77 of MiCAR. Live firm prices and post-trade transparency information are published at <a href="https://prices.hillgate.com" style="color:#fff; text-decoration: underline;">prices.hillgate.com</a> without registration.</p>
+  </div>
+</section>
+<div class="positioning-strip"><div class="container">Hillgate provides services to professional and business clients only.</div></div>
+
+<section>
+  <div class="container">
+    <h2>Methodology</h2>
+    <p>Hillgate's price for an exchange transaction is constructed from two elements: a published reference mid price, and a tier-based markup. Both are publicly available and verifiable by any client.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Reference mid prices</h2>
+    <p>Hillgate uses Bloomberg BFIX rates as the reference mid for the underlying currency pair. For redemption between an EMT and its reference fiat currency (for example USDC and USD), an additional EMT redemption parameter is applied. During non-market hours, the reference price is calculated as the most recent business-day close plus or minus 50 basis points.</p>
+
+    <div class="price-block">
+      <div class="price-cell">
+        <h4>USD/EUR</h4>
+        <div class="quote">Bid 0.92140 / Mid 0.92150 / Ask 0.92160</div>
+        <div class="source">Source: Bloomberg EURUSD BFIX (inverted). Live during weekdays; weekend prices = Friday close ± 50 bps.</div>
+      </div>
+      <div class="price-cell">
+        <h4>USDC/EUR</h4>
+        <div class="quote">Bid 0.92122 / Mid 0.92150 / Ask 0.92178</div>
+        <div class="source">Source: Bloomberg EURUSD BFIX (inverted) ± 2 bps USDC redemption fee.</div>
+      </div>
+      <div class="price-cell">
+        <h4>EUR/GBP</h4>
+        <div class="quote">Bid 0.85820 / Mid 0.85830 / Ask 0.85840</div>
+        <div class="source">Source: Bloomberg EURGBP BFIX. Live during weekdays; weekend prices = Friday close ± 50 bps.</div>
+      </div>
+    </div>
+    <p class="note-italic">Indicative example. Live firm prices are published at prices.hillgate.com.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Tier-based markups (non-discriminatory commercial policy)</h2>
+    <p>Hillgate operates a published, objective and non-discriminatory tier structure based on measurable criteria including trading volume, average ticket size, KYC tier and length of relationship. The tier and markup applicable to a client are stated in the client agreement.</p>
+    <div class="tier-grid">
+      <div class="tier"><h4>Bronze</h4><div class="bps">10 bps</div><p class="small">over published mid</p></div>
+      <div class="tier"><h4>Silver</h4><div class="bps">8 bps</div><p class="small">over published mid</p></div>
+      <div class="tier"><h4>Gold</h4><div class="bps">5 bps</div><p class="small">over published mid</p></div>
+    </div>
+    <p class="note-italic">Indicative example. Final markups are set out in Hillgate's commercial policy and stated in each client's agreement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Payments and FX (EMI) pricing</h2>
+    <p>Hillgate's EMI services are priced on a flat-fee schedule, set out in the client agreement and the Hillgate fee schedule. The schedule is shared during onboarding and is available on request to existing clients.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Post-trade transparency</h2>
+    <p>In line with Article 77(4) MiCAR, Hillgate publishes information on every executed exchange transaction within one business day at <a href="https://prices.hillgate.com">prices.hillgate.com</a>. Disclosures include trade volume, executed price and the prescribed transaction metadata. The format follows Annex II, Table 2 of Commission Delegated Regulation (EU) 2025/417.</p>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container">
+    <div class="columns">
+      <div>
+        <h4>Hillgate Finance B.V.</h4>
+        <p>Keizersgracht 391A<br>1016 EJ Amsterdam<br>The Netherlands</p>
+        <p>KvK 95876936<br>LEI 98450007BXF8A6083F77</p>
+      </div>
+      <div>
+        <h4>Regulatory status</h4>
+        <p>Authorised by De Nederlandsche Bank as an Electronic Money Institution. Register entry WFTEG R200389.</p>
+        <p>Authorisation as a Crypto-Asset Service Provider under Regulation (EU) 2023/1114 (MiCAR) is pending with the Autoriteit Financiële Markten. Crypto-asset services are not provided until that authorisation is granted.</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="complaints.html">Complaints</a></li>
+          <li><a href="disclosures-conflicts.html">Conflicts of interest</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="disclosures-risks.html">Risk warning</a></li>
+          <li><a href="disclosures-environmental.html">Environmental impact</a></li>
+          <li><a href="disclosures-custody.html">Custody policy</a></li>
+          <li><a href="whistleblowing.html">Whistleblowing</a></li>
+          <li><a href="legal-terms.html">Terms</a></li>
+          <li><a href="legal-privacy.html">Privacy</a></li>
+          <li><a href="legal-cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="small-print">Hillgate Finance B.V. provides services to professional and business clients only. Crypto-assets are highly volatile and may result in the loss of all funds. Please read the <a href="disclosures-risks.html">risk warning</a> before engaging with crypto-asset services. © 2026 Hillgate Finance B.V.</p>
+  </div>
+</footer>
+</body>
+</html>
